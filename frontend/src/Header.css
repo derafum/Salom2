@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+  background: linear-gradient(90deg, #8D297F, #EC238D); /* Градиентный фон */
+  position: fixed; /* Фиксируем шапку наверху */
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  top: 0; /* Прижимаем шапку к верхней части экрана */
+  left: 0; /* Прижимаем шапку к левой части экрана */
+  z-index: 1000; /* Убедитесь, что шапка всегда поверх других элементов */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Добавляем небольшую тень для визуального отделения шапки от контента */
+}
+
+/* Следующее свойство устраняет возможные проблемы с отображением содержимого, которое может быть скрыто под шапкой */
+body {
+  padding-top: 80px; /* Должно быть равно или больше высоты шапки */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 46px;
+  font-weight: bold;
+  color: #fff; /* Изменяем цвет текста на белый */
+}
+
+.headerLogo {
+  width: 160px; /* Установите нужный размер */
+  height: auto;
+   filter: brightness(0) invert(1);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white; /* Изменяем цвет текста на белый */
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.navLink:hover {
+  background-color: #EC238D;;
+  color: white;
+}
+
+.loginButton {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.loginButton:hover {
+  background-color: #BC3D96;
+  color: white;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.registerButton {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-right: 85px;
+}
+
+.registerButton:hover {
+  background-color: #BC3D96;
+  color: white;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}

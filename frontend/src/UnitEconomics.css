@@ -1,0 +1,31 @@
+.unit-economics {
+  padding: 20px;
+}
+
+.unit-economics h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.unit-economics iframe {
+  border: none;
+}
+.unit-economics {
+  padding: 20px;
+}
+
+.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.excel-table th, .excel-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.excel-table th {
+  background-color: #f4f4f4;
+}

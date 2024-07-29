@@ -1,0 +1,92 @@
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background-color: white; /* Белый фон */
+}
+
+.contentBlock {
+  max-width: 600px;
+  margin-left: 50px; /* Отступ слева для смещения текста */
+}
+
+.title {
+  font-size: 64px;
+  color: #333; /* Темный цвет текста для видимости на белом фоне */
+}
+
+.subtitle {
+  font-size: 32px;
+  color: #333; /* Темный цвет текста для видимости на белом фоне */
+  margin: 20px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.mainButton {
+  background-color: #BC3D96; /* Цвет кнопки */
+  color: white; /* Цвет текста */
+  font-size: 26px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.mainButton:hover {
+  background-color: #EC238D; /* Цвет кнопки при наведении */
+}
+
+img {
+  max-width: 800px;
+  height: auto;
+  margin: 45px 0;
+}
+
+.pricingContainer {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #f9f9f9; /* Светло-серый фон */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pricingContainer h3 {
+  margin-bottom: 20px;
+  font-size: 34px;
+  color: #BC3D96; /* Цвет заголовка */
+}
+
+.pricingOptionContainer {
+  display: flex;
+  justify-content: space-around; /* Распределение опций по горизонтали */
+}
+
+.pricingOption {
+  flex: 1;
+  margin: 0 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pricingOption h4 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #BC3D96; /* Цвет заголовка тарифа */
+}
+
+.pricingOption p {
+  font-size: 20px;
+  color: #333;
+}

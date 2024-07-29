@@ -1,0 +1,41 @@
+.dashboard {
+  padding: 20px;
+  text-align: center; /* Центрирование содержимого */
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-around; /* Разделение секций по горизонтали */
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%; /* Установите нужную ширину для каждой секции */
+}
+
+.dashboardButton {
+  background-color: #BC3D96;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.dashboardButton:hover {
+  background-color: #EC238D;
+}
+
+.sectionImage {
+  width: 900px; /* Фиксированная ширина */
+  height: auto;
+  object-fit: cover; /* Объект масштабируется с сохранением пропорций */
+  margin-top: 10px;
+}
