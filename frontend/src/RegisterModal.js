@@ -15,7 +15,7 @@ const RegisterModal = ({ isOpen, onRequestClose }) => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/accounts/api/register/', {
+      const response = await axios.post('http://81.94.156.136:8000/accounts/api/register/', {
         username: username,
         password: password,
         email: email

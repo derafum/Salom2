@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
       const token = localStorage.getItem('access_token');
       if (token) {
         try {
-          const response = await axios.get('http://localhost:8000/accounts/api/user/', {
+          const response = await axios.get('http://81.94.156.136:8000/accounts/api/user/', {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -31,11 +31,11 @@ const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post('http://localhost:8000/accounts/api/token/', { username, password });
+      const response = await axios.post('http://81.94.156.136:8000/accounts/api/token/', { username, password });
       localStorage.setItem('access_token', response.data.access);
       localStorage.setItem('refresh_token', response.data.refresh);
 
-      const userResponse = await axios.get('http://localhost:8000/accounts/api/user/', {
+      const userResponse = await axios.get('http://81.94.156.136:8000/accounts/api/user/', {
         headers: {
           Authorization: `Bearer ${response.data.access}`
         }
