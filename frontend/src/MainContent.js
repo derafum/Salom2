@@ -9,7 +9,7 @@ const MainContent = () => {
   return (
       <div className="mainContent">
           <div className="contentBlock">
-              <p className="subtitle">Платформа, предназначеная <br/> для управления бизнес-процессами <br/> и
+              <p className="subtitle">Этааааа Платформа, предназначеная <br/> для управления бизнес-процессами <br/> и
                   экономическими расчетами <br/> на <b>Wildberries</b></p>
               <div className="buttonContainer">
                   <Link to="/unit-economics" className="mainButton">Юнит Экономика</Link>
