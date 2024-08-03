@@ -1,12 +1,10 @@
 .dashboard {
   padding: 20px;
-  text-align: center;
+  text-align: center; /* Центрирование содержимого */
 }
 
 .contentContainer {
   display: flex;
-  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -14,8 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* По умолчанию занимает всю ширину */
-  max-width: 300px; /* Максимальная ширина для контроля размера */
+  width: 85%; /* Измените ширину, чтобы увеличить размер секции */
   margin: 10px;
 }
 
@@ -24,12 +21,12 @@
   color: white;
   font-size: 18px;
   padding: 10px 20px;
+  margin: 10px;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   transition: background-color 0.3s;
-  display: block; /* Занимает всю доступную ширину */
 }
 
 .dashboardButton:hover {
@@ -37,22 +34,7 @@
 }
 
 .sectionImage {
-  width: 200%; /* Занимает всю доступную ширину родителя */
-  height: auto;
-  object-fit: cover; /* Обеспечивает сохранение пропорций */
   margin-top: 10px;
+  max-height: 600px; /* Ограничение максимальной высоты изображения для контроля */
 }
 
-/* Медиа запросы для более крупных экранов */
-@media (max-width: 1350px) {
-  .contentContainer {
-    flex-wrap: nowrap; /* Отменяет перенос элементов */
-  }
-
-  .sectionImage {
-  width: 130%; /* Занимает всю доступную ширину родителя */
-  height: auto;
-  object-fit: cover; /* Обеспечивает сохранение пропорций */
-  margin-top: 10px;
-}
-}
