@@ -1,11 +1,12 @@
 .dashboard {
   padding: 20px;
-  text-align: center; /* Центрирование содержимого */
+  text-align: center;
 }
 
 .contentContainer {
   display: flex;
-  justify-content: space-around; /* Разделение секций по горизонтали */
+  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -13,7 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%; /* Установите нужную ширину для каждой секции */
+  width: 100%; /* По умолчанию занимает всю ширину */
+  max-width: 300px; /* Максимальная ширина для контроля размера */
+  margin: 10px;
 }
 
 .dashboardButton {
@@ -21,12 +24,12 @@
   color: white;
   font-size: 18px;
   padding: 10px 20px;
-  margin: 10px;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   transition: background-color 0.3s;
+  display: block; /* Занимает всю доступную ширину */
 }
 
 .dashboardButton:hover {
@@ -34,8 +37,19 @@
 }
 
 .sectionImage {
-  width: 900px; /* Фиксированная ширина */
+  width: 100%; /* Занимает всю доступную ширину родителя */
   height: auto;
-  object-fit: cover; /* Объект масштабируется с сохранением пропорций */
+  object-fit: cover; /* Обеспечивает сохранение пропорций */
   margin-top: 10px;
+}
+
+/* Медиа запросы для более крупных экранов */
+@media (min-width: 768px) {
+  .contentContainer {
+    flex-wrap: nowrap; /* Отменяет перенос элементов */
+  }
+
+  .section {
+    width: 45%; /* Возвращает ширину секции на крупных экранах */
+  }
 }
