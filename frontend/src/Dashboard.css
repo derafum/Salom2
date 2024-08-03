@@ -37,19 +37,22 @@
 }
 
 .sectionImage {
-  width: 100%; /* Занимает всю доступную ширину родителя */
+  width: 200%; /* Занимает всю доступную ширину родителя */
   height: auto;
   object-fit: cover; /* Обеспечивает сохранение пропорций */
   margin-top: 10px;
 }
 
 /* Медиа запросы для более крупных экранов */
-@media (min-width: 768px) {
+@media (max-width: 1350px) {
   .contentContainer {
     flex-wrap: nowrap; /* Отменяет перенос элементов */
   }
 
-  .section {
-    width: 45%; /* Возвращает ширину секции на крупных экранах */
-  }
+  .sectionImage {
+  width: 130%; /* Занимает всю доступную ширину родителя */
+  height: auto;
+  object-fit: cover; /* Обеспечивает сохранение пропорций */
+  margin-top: 10px;
+}
 }
