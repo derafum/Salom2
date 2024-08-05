@@ -10,8 +10,6 @@ const UnitEconomics = () => {
       <h2>Юнит Экономика</h2>
       <iframe
         src={iframeSrc}
-        width="100%"
-        height="600" // Вы можете настроить высоту
         frameBorder="0"
         className="google-sheet-iframe"
       >

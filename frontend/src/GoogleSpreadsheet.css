@@ -1,0 +1,38 @@
+.spreadsheet-container {
+  height: 85vh; /* Высота контейнера 85% от высоты окна просмотра */
+  width: 100%;  /* Полная ширина контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+}
+
+.google-spreadsheet-iframe {
+  border: 0;
+  width: 100%; /* Полная ширина iframe */
+  height: 100%; /* Полная высота iframe */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта */
+  border-radius: 8px; /* Скругленные углы */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Плавное изменение размеров */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1368px) {
+  .google-spreadsheet-iframe {
+height: 45vh; /* Увеличиваем высоту для мобильных устройств */
+  }
+}
+
+@media (max-width: 991px) {
+  .google-spreadsheet-iframe {
+    height: 45vh; /* Увеличиваем высоту для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .google-spreadsheet-iframe {
+height: 35vh; /* Увеличиваем высоту для мобильных устройств */
+  }
+}
+

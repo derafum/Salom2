@@ -1,14 +1,27 @@
-.unit-economics {
-  padding: 20px;
-}
+
 
 .unit-economics h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 .google-sheet-iframe {
   border: none;
-  width: 100%; /* Занимает всю доступную ширину */
-   height: 75vh;
+  width: 100%; /* Полная ширина окна */
+  height: 78vh; /* Высота, основанная на 65% от высоты окна */
+  margin: 0 auto; /* Центрирует iframe по горизонтали */
+  display: block; /* Убирает дополнительные отступы */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1368px) {
+  .google-sheet-iframe {
+    height: 65vh; /* Увеличиваем высоту для мобильных устройств */
+  }
+}
+
+@media (max-width: 1100px) {
+  .google-sheet-iframe {
+    height: 60vh; /* Увеличиваем высоту на больших экранах */
+  }
 }
