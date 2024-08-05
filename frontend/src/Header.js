@@ -1,17 +1,19 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom'; // Подключаем useNavigate
 import './Header.css';
-import logo from './Images/logo.png';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
 import { AuthContext } from './AuthContext';
 
 const Header = () => {
   const { isAuthenticated, user, logout } = useContext(AuthContext);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+
+  // Получение доступа к navigate
+  const navigate = useNavigate();
 
   const openLoginModal = () => setIsLoginModalOpen(true);
   const closeLoginModal = () => setIsLoginModalOpen(false);
@@ -24,11 +26,18 @@ const Header = () => {
     toast.info('Вы вышли из аккаунта.');
   };
 
+  // Обработчик клика для перехода на /dashboard
+  const handleLogoClick = () => {
+    navigate('/dashboard'); // Перенаправление на /dashboard
+  };
+
   return (
     <header className="header">
       <ToastContainer />
       <div className="logo-container">
-        <div id="home" className="logo">Автоматизация финансов Wildberries</div>
+        <div id="home" className="logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+          Автоматизация финансов Wildberries
+        </div>
       </div>
       <nav className="navigation">
         {/* Можно добавить навигационные ссылки здесь */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes, Navigate, Outlet} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import MainContent from './MainContent';
@@ -27,7 +27,6 @@ const App = () => {
               <Route path="/unit-economics" element={<PrivateRoute />}>
                 <Route path="/unit-economics" element={<UnitEconomics />} />
               </Route>
-
               <Route path="/google-spreadsheet" element={<PrivateRoute />}>
                 <Route path="/google-spreadsheet" element={<GoogleSpreadsheet />} />
               </Route>
@@ -43,11 +42,16 @@ const App = () => {
   );
 };
 
+// PrivateRoute компонент для защиты маршрутов
 const PrivateRoute = () => {
   const { isAuthenticated, hasAccess } = React.useContext(AuthContext);
+
+  // Если пользователь не аутентифицирован, перенаправляем на главную страницу
   if (!isAuthenticated) {
     return <Navigate to="/" />;
   }
+
+  // Если пользователь аутентифицирован, но не имеет доступа, перенаправляем на страницу с отказом в доступе
   return hasAccess ? <Outlet /> : <NoAccess />;
 };
 

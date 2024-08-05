@@ -25,7 +25,13 @@ body {
 .logo {
   font-size: 46px;
   font-weight: bold;
-  color: #fff; /* Изменяем цвет текста на белый */
+  color: #fff;
+  cursor: pointer; /* Указатель курсора показывает, что элемент кликабелен */
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.logo:hover {
+  color: #EC238D; /* Изменение цвета при наведении для эффекта */
 }
 
 .headerLogo {
